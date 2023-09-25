@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main{
+  background-color: #F1EFEC;
+}
+.fontColor{
+  color:#52b4b9;
+}
+.backgroundColor{
+  background-color: #52b4b9;
+
+}
+.header {
+  border-bottom: solid 3px skyblue;
+  position: relative;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #ffc778;
+  bottom: -3px;
+  width: 30%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balloon-008 {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  position: relative;
+  max-width: 300px;
+  margin-left: 15px;
+  padding: .8em 1.2em;
+  border: 3px solid #52b4b9;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333333;
+  padding: 10px;
+}
+
+.balloon-008::before,
+.balloon-008::after {
+  position: absolute;
+  left: -15px;
+  width: 15px;
+  height: 30px;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  content: '';
+}
+
+.balloon-008::before {
+  background-color: #52b4b9;
+}
+
+.balloon-008::after {
+  left: -11px;
+  background-color: #fff;
+}
+
+@media (max-width: 640px) {
+  .balloon-008 {
+    max-width: 90%; /* 画面幅の90%を最大幅として設定 */
+    margin-left: 10px; /* 左の余白を調整 */
+    padding: .5em .8em; /* 内部の余白を調整 */
+  }
+
+  .balloon-008::before,
+  .balloon-008::after {
+    left: -10px; /* 矢印の位置を調整 */
+    width: 10px; /* 矢印の幅を調整 */
+    height: 20px; /* 矢印の高さを調整 */
+  }
+
+  .balloon-008::after {
+    left: -8px; /* 2つ目の矢印の位置を調整 */
+  }
+}
+.button-007 {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1877f2;
 }
 
-.App-link {
-  color: #61dafb;
+.button-007:hover {
+  border: 1px solid #1877f2;
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-007:hover path {
+  fill: #1877f2;
+}
+
+.button-012 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+
+.button-012::before {
+  position: absolute;
+  top: 23px;
+  left: -18px;
+  width: 60px;
+  height: 60px;
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  content: '';
+}
+
+.button-012 svg {
+  z-index: 1;
+}
+
+.button-006 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1da1f2;
+}
+
+.button-006:hover {
+  border: 1px solid #1da1f2;
+  background-color: #fff;
+}
+
+.button-006:hover path {
+  fill: #1da1f2;
 }
