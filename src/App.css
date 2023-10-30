@@ -12,11 +12,6 @@ main{
   background-color: #52b4b9;
 
 }
-.header {
-  border-bottom: solid 3px skyblue;
-  position: relative;
-  
-}
 
 .header:after {
   position: absolute;

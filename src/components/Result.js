@@ -83,7 +83,7 @@ const Result = ({ scores }) => {
                 pointLabels: {
                     display: true, 
                     font: {
-                        size: 5, 
+                        size: 6, 
                         weight: 'bold'
                     }
                     
@@ -122,7 +122,7 @@ const Result = ({ scores }) => {
     return (
 <main>
     <div className="flex flex-col items-center min-h-screen pt-4 pb-4">
-        <h1 className="mb-4 mt-4 text-3xl font-bold">あなたのキャリアの総合点数</h1>
+        <h1 className="mb-4 mt-4 text-3xl font-bold">あなたのキャリアの健康点数</h1>
         <h2 className="mb-8 text-5xl font-bold">{totalScore}点</h2>
         <div className="w-3/4 md:w-1/3 mb-8 px-1 bg-white">
             <Chart type="radar" data={chartData} options={lightOptions} />
@@ -157,7 +157,7 @@ const Result = ({ scores }) => {
 
     <div className="flex items-center justify-center flex-col mt-8">
         <div className='text-xl md:text-3xl'>
-            <h1 className="text-center mb-2 font-bold">キャリアの総合点数を上げたい方へ</h1>
+            <h1 className="text-center mb-2 font-bold">キャリアの総合健康点数を上げたい方へ</h1>
             <h3 className='text-center mt-8'>無料会員登録すると今なら会員登録すると今なら３大特典プレゼント</h3>
             <section className="pt-10 pb-5 lg:pt-[30px] lg:pb-1">
                 <div className="container mx-auto">
@@ -186,16 +186,10 @@ const Result = ({ scores }) => {
         <a href="https://service.meavita.jp/freeregistrationform">
             <button 
                 type="button" 
-                className=" backgroundColor hover:bg-gradient-to-br  rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2  text-black font-semibold">  
+                className=" backgroundColor hover:bg-gradient-to-br  rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2  text-white font-semibold">  
                 今すぐ会員登録する
             </button>
         </a>
-        <button 
-            type="button" 
-            className="text-white backgroundColor hover:bg-gradient-to-br font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 mt-12" 
-            onClick={() => navigate('/')}>
-            簡単診断TOPに戻る
-        </button>
     </div>
     <footer className='mt-10 text-center'>© mea vita All Rights Reserved.</footer>
 </main>
